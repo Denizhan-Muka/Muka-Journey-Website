@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muka Journey | Deneyimin ve Yaratıcılığın Buluşma Noktası</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Muka Journey; İstanbul'da gastronomi, yaratıcı atölyeler, sanat, özel organizasyonlar ve kurumsal etkinlikler etrafında özgün deneyimler tasarlar.">
+  <meta name="keywords" content="Muka, Muka Journey, Deneyim Tasarımı, Gastronomi Atölyesi, İstanbul Etkinlikleri, Şef Masası, Kurumsal Etkinlik, Sanat ve Medya">
+  <meta name="author" content="Muka Journey">
+  
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muka Journey | Deneyimin ve Yaratıcılığın Buluşma Noktası">
+  <meta property="og:description" content="Gastronomi, sanat ve yaratıcı fikirleri bir araya getiren özgün deneyimler.">
+  <meta property="og:url" content="https://mukajourney.com">
+  <meta property="og:image" content="assets/img/muka-hero-table.jpeg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- 1. NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="Muka Journey Ana Sayfa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 52" role="img" aria-labelledby="muka-logo-title">
+          <title id="muka-logo-title">Muka</title>
+          <text x="2" y="42" font-family="'Century Gothic', 'Avenir Next', Futura, sans-serif" font-size="48" font-weight="300" letter-spacing="-3.1" fill="#1C1917">mu<tspan fill="#8E2020">k</tspan>a</text>
+        </svg>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="nav-menu" aria-label="Ana Menü">
+        <a href="#hakkinda" class="nav-link">Muka Hakkında</a>
+        <a href="#deneyimler" class="nav-link">Deneyimler</a>
+        <a href="#sanat-gastronomi" class="nav-link">Sanat · Gastronomi</a>
+        <a href="#size-ozel" class="nav-link">Size Özel</a>
+        <a href="bilgi-al.html" class="nav-link">İletişim</a>
+        <a href="#yaklasanlar" class="nav-link">Yaklaşan Deneyimler</a>
+      </nav>
+
+      <div class="language-switcher nav-language" role="group" aria-label="Dil seçimi">
+        <button class="language-option is-active" type="button" data-language="tr" aria-pressed="true">TR</button>
+        <span aria-hidden="true">/</span>
+        <button class="language-option" type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- Nav CTA -->
+      <div class="nav-cta">
+        <a href="bilgi-al.html" class="btn btn-primary">
+          Bilgi Al <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="mobile-drawer-close" type="button" aria-label="Menüyü Kapat">
+      <span aria-hidden="true">←</span>
+      <span>Geri</span>
+    </button>
+    <div class="mobile-nav-list">
+      <div class="language-switcher mobile-language" role="group" aria-label="Dil seçimi">
+        <button class="language-option is-active" type="button" data-language="tr" aria-pressed="true">TR</button>
+        <span aria-hidden="true">/</span>
+        <button class="language-option" type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#hakkinda" class="mobile-nav-link">Muka Hakkında</a>
+      <a href="#deneyimler" class="mobile-nav-link">Deneyimler</a>
+      <a href="#sanat-gastronomi" class="mobile-nav-link">Sanat · Gastronomi · Tasarım</a>
+      <a href="#size-ozel" class="mobile-nav-link">Size Özel Deneyimler</a>
+      <a href="bilgi-al.html" class="mobile-nav-link">İletişim & Konum</a>
+      <a href="#yaklasanlar" class="mobile-nav-link">Yaklaşan Deneyimler</a>
+      <div style="margin-top: 1rem;">
+        <a href="bilgi-al.html" class="btn btn-primary" style="width: 100%;">
+          Bilgi Al / Rezervasyon <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="mobile-drawer-footer">
+      <div><strong>Muka Journey</strong> · Muka, İstanbul</div>
+      <div>info@mukajourney.com</div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="eyebrow">Deneyim Tasarım Stüdyosu · İstanbul</div>
+          <h1 class="hero-title">
+            Deneyimin ve <em>yaratıcılığın</em> buluşma noktası.
+          </h1>
+          <p class="hero-subtitle">
+            Gastronomi, sanat ve yaratıcı fikirleri bir araya getiren; sıradanlıktan uzaklaşarak anıları zenginleştiren özgün deneyimler.
+          </p>
+          <div class="hero-actions">
+            <a href="#deneyimler" class="btn btn-primary">
+              Deneyimleri Keşfet <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual-wrap reveal reveal-delay-1">
+          <div class="hero-visual-card">
+            <img src="assets/img/muka-hero-table.jpeg" alt="Muka'nın sanatla çevrelenmiş uzun sofra deneyimi" width="899" height="1600">
+            <div class="hero-badge-overlay">
+              <div class="hero-badge-text">Muka · Hatırlanacak Anlar</div>
+              <div class="hero-badge-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MUKA MANİFESTOSU -->
+    <section class="manifesto-section section-spacing" id="manifesto">
+      <div class="container">
+        <div class="eyebrow reveal" style="justify-content: center;">Manifesto</div>
+        <h2 class="manifesto-quote reveal reveal-delay-1">
+          Sıradanlıktan uzaklaşarak, anıları zenginleştiren deneyimler.
+        </h2>
+        <p class="manifesto-text reveal reveal-delay-2">
+          Muka; gastronomiyi, yaratıcılığı, sanatı ve insanları aynı deneyimin etrafında buluşturur. Her buluşmayı yalnızca katılınan bir etkinlik değil, hatırlanacak bir ana dönüştürmeyi amaçlar.
+        </p>
+        <div class="manifesto-pillars reveal reveal-delay-3">
+          <span class="manifesto-pill">Merak Etmek</span>
+          <span class="manifesto-pill">Üretmek</span>
+          <span class="manifesto-pill">Paylaşmak</span>
+          <span class="manifesto-pill">Birlikte Hatırlamak</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SANAT · GASTRONOMİ · TASARIM -->
+    <section class="pillars-section section-spacing" id="sanat-gastronomi">
+      <div class="container">
+        <div class="eyebrow eyebrow-light reveal">Kesişim Noktası</div>
+        
+        <div class="pillars-title-list">
+          <div class="pillar-item is-active reveal" data-pillar="sanat">
+            01. <span>SANAT</span>
+          </div>
+          <div class="pillar-item reveal reveal-delay-1" data-pillar="gastronomi">
+            02. <span>GASTRONOMİ</span>
+          </div>
+          <div class="pillar-item reveal reveal-delay-2" data-pillar="tasarim">
+            03. <span>TASARIM</span>
+          </div>
+        </div>
+
+        <div class="pillar-unifier reveal reveal-delay-3">
+          <div class="pillar-unifier-heading">
+            Tek bir Muka deneyiminde buluşur.
+          </div>
+          <p class="pillar-unifier-desc">
+            Disiplinlerin sınırlarını kaldıran, duyuları harekete geçiren ve her detayı incelikle tasarlanan bütünsel bir buluşma kültürü.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. DENEYİMLER (MUKA'DA NELER VAR?) -->
+    <section class="experiences-section section-spacing" id="deneyimler">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">Deneyim Kataloğu</div>
+          <h2 style="font-size: var(--text-4xl); margin-bottom: 0.75rem;">Muka'da Neler Var?</h2>
+          <p style="font-size: var(--text-lg); color: var(--color-muted);">Farklı ilgi alanlarını, insanları ve hikâyeleri aynı yerde buluşturan deneyimler.</p>
+        </div>
+
+        <div class="exp-grid">
+          
+          <!-- Kategori 1: Gastronomi & Tadım -->
+          <div class="exp-card reveal">
+            <div>
+              <div class="exp-card-header">
+                <span class="exp-card-num">Mutfak & Sofra</span>
+              </div>
+              <h3 class="exp-card-title">Gastronomi & Tadım</h3>
+              <p class="exp-card-desc">Lezzeti hikâyesiyle keşfeden, ustalık ve sohbeti aynı masaya taşıyan deneyimler.</p>
+              
+              <div class="exp-item-list">
+                <div class="exp-item"><span class="exp-item-bullet"></span> Makarna Yapımı & Sos Atölyesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Geleneksel & Modern Meze Atölyesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Sushi Yapım Teknikleri</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Nitelikli Kahve Demleme & Tadım</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> İmza Kokteyl Atölyesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Şef Masası Özel Tadım Menüleri</div>
+              </div>
+
+              <!-- Accordion Expandable Content -->
+              <div class="exp-expanded-list">
+                <div class="exp-item"><span class="exp-item-bullet"></span> Şarap & Peynir Eşleşmesi Atölyesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Bira Tadım Kültürü & Nüansları</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Rakı Tadım Notları & Çilingir Sofrası</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Viski Tadım & Karakter Eğitimi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> İspanyol Tapas Gecesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> İran & Balkan Yemekleri Yolculuğu</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> El Yapımı Pizza & Gurme Burger</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Glutensiz & Sağlıklı Mutfak</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Zencefilli Kurabiye Süsleme Atölyesi</div>
+              </div>
+            </div>
+
+            <button class="exp-toggle-btn" type="button" aria-expanded="false">
+              Tümünü Gör <span class="arrow">↓</span>
+            </button>
+          </div>
+
+          <!-- Kategori 2: Yaratıcı Atölyeler -->
+          <div class="exp-card reveal reveal-delay-1">
+            <div>
+              <div class="exp-card-header">
+                <span class="exp-card-num">El Sanatları & Tasarım</span>
+              </div>
+              <h3 class="exp-card-title">Yaratıcı Atölyeler</h3>
+              <p class="exp-card-desc">Ellerle üretmenin dinginliğini ve özgün nesneler tasarlamanın keyfini yaşatan buluşmalar.</p>
+              
+              <div class="exp-item-list">
+                <div class="exp-item"><span class="exp-item-bullet"></span> Punch Sanatı & Tekstil Dokuma</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Epoksi & Işıklı Tablo Tasarımı</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Doğal Parfüm & Aromaterapi Atölyesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Özgün Takı & Aksesuar Yapımı</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Soya Mum & Doğal Sabun Yapımı</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Linol Baskı & İllüstrasyon</div>
+              </div>
+
+              <!-- Accordion Expandable Content -->
+              <div class="exp-expanded-list">
+                <div class="exp-item"><span class="exp-item-bullet"></span> Bitki Bakımı & Teraryum Dikim Atölyesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Kil ile Serbest Obje Tasarımı</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Yaratıcı Kolaj & Vizyon Panosu</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Nefes & Beden Farkındalığı Seansları</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Dans & Ritim İfade Atölyesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Doğal Yağlarla Bütünsel Bakım</div>
+              </div>
+            </div>
+
+            <button class="exp-toggle-btn" type="button" aria-expanded="false">
+              Tümünü Gör <span class="arrow">↓</span>
+            </button>
+          </div>
+
+          <!-- Kategori 3: Sanat & Medya -->
+          <div class="exp-card reveal">
+            <div>
+              <div class="exp-card-header">
+                <span class="exp-card-num">Sinema & Anlatı</span>
+              </div>
+              <h3 class="exp-card-title">Sanat & Medya</h3>
+              <p class="exp-card-desc">Görsel hikâye anlatıcılığı, sahne sanatları ve kültür buluşmalarıyla ilham veren saatler.</p>
+              
+              <div class="exp-item-list">
+                <div class="exp-item"><span class="exp-item-bullet"></span> Film Yapım Teknikleri & Dil Çözümlemesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Senaryo Yazım Teknikleri Atölyesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Yönetmen & Oyuncu Söyleşileri</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Kısa Film Gösterimleri & Tartışma</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Kamera Önü Oyunculuk & İfade</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> İçerik Üreticileri & Marka Etkinlikleri</div>
+              </div>
+
+              <!-- Accordion Expandable Content -->
+              <div class="exp-expanded-list">
+                <div class="exp-item"><span class="exp-item-bullet"></span> Belgesel Sinema & Arşiv Okumaları</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Kültür-Sanat Söyleşileri & İmza Buluşmaları</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Yaratıcı Yazarlık & Hikâye Kurgusu</div>
+              </div>
+            </div>
+
+            <button class="exp-toggle-btn" type="button" aria-expanded="false">
+              Tümünü Gör <span class="arrow">↓</span>
+            </button>
+          </div>
+
+          <!-- Kategori 4: Özel & Kurumsal Deneyimler -->
+          <div class="exp-card reveal reveal-delay-1">
+            <div>
+              <div class="exp-card-header">
+                <span class="exp-card-num">Davet & Konsept</span>
+              </div>
+              <h3 class="exp-card-title">Özel & Kurumsal Deneyimler</h3>
+              <p class="exp-card-desc">Ekip bağlarını güçlendiren, kurumlara ve özel günlere terzi işi tasarlanan konsept buluşmalar.</p>
+              
+              <div class="exp-item-list">
+                <div class="exp-item"><span class="exp-item-bullet"></span> Ev, Tarihi Mekân, Yat & Teknede Özel Yemek</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Tematik Doğum Günü & Özel Davetler</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Film Yemekleri (İkonik Filmlerden Menüler)</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Koku Hafızası Gecesi (Duyusal Yolculuk)</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Gastronomi & Kültür Bilgi Yarışmaları</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Kurumsal Yılbaşı & Motivasyon Buluşmaları</div>
+              </div>
+
+              <!-- Accordion Expandable Content -->
+              <div class="exp-expanded-list">
+                <div class="exp-item"><span class="exp-item-bullet"></span> Duyusal Akşam: Işık, Müzik & Tat Eşleşmesi</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Marka Lansmanları & Deneyim Odaklı Davetler</div>
+                <div class="exp-item"><span class="exp-item-bullet"></span> Şirket İçi Takım Çalışması & Yemek Atölyeleri</div>
+              </div>
+            </div>
+
+            <button class="exp-toggle-btn" type="button" aria-expanded="false">
+              Tümünü Gör <span class="arrow">↓</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. BÜYÜK DUYGU ANI (EMOTIONAL CINEMATIC BREAK) -->
+    <section class="emotion-section" id="duygu-ani">
+      <img src="assets/img/muka-community.jpeg" alt="Muka buluşmasında bir araya gelen konuklar" class="emotion-bg" width="1068" height="1600">
+      <div class="emotion-overlay"></div>
+      <div class="emotion-content reveal">
+        <div class="eyebrow eyebrow-light" style="justify-content: center;">Buluşma Anı</div>
+        <h2 class="emotion-title">
+          Sadece bir etkinlik değil.
+          <span>Paylaşılan bir deneyim.</span>
+        </h2>
+        <p class="emotion-subtitle">
+          Yavaşlamanın, paylaşmanın ve yan yana gelmenin hali.
+        </p>
+      </div>
+    </section>
+
+    <!-- 7. YAKLAŞAN DENEYİMLER -->
+    <section class="upcoming-section section-spacing" id="yaklasanlar">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center;">
+          <div class="eyebrow" style="justify-content: center;">Takvim</div>
+          <h2 style="font-size: var(--text-4xl);">Yaklaşan Deneyimler</h2>
+        </div>
+
+        <!-- Dynamic Container (JS handles empty state vs announced events) -->
+        <div id="upcoming-events-container"></div>
+      </div>
+    </section>
+
+    <!-- 8. SİZE ÖZEL DENEYİMLER (BESPOKE & CORPORATE) -->
+    <section class="bespoke-section section-spacing" id="size-ozel">
+      <div class="container bespoke-grid">
+        <div class="bespoke-content reveal">
+          <h2 class="bespoke-title">
+            Size özel ilham veren deneyimler tasarlıyoruz.
+          </h2>
+          <p class="bespoke-desc">
+            İster sevdiklerinizle paylaşacağınız özel bir buluşma, ister ekibinizi bir araya getirecek kurumsal bir deneyim, ister markanıza özel yaratıcı bir etkinlik… Muka, fikrinizi özgün bir deneyime dönüştürür.
+          </p>
+
+          <div class="bespoke-categories">
+            <div class="bespoke-cat-item">
+              <div class="bespoke-cat-title">Özel Davetler</div>
+              <div class="bespoke-cat-sub">Butik sofralar, doğum günleri & anı geceleri</div>
+            </div>
+            <div class="bespoke-cat-item">
+              <div class="bespoke-cat-title">Kurumsal Etkinlikler</div>
+              <div class="bespoke-cat-sub">Motivasyon, takım ruhu & interaktif atölyeler</div>
+            </div>
+            <div class="bespoke-cat-item">
+              <div class="bespoke-cat-title">Marka Deneyimleri</div>
+              <div class="bespoke-cat-sub">Ürün lansmanları & influencer buluşmaları</div>
+            </div>
+            <div class="bespoke-cat-item">
+              <div class="bespoke-cat-title">Konsept Geceler</div>
+              <div class="bespoke-cat-sub">Film yemekleri, koku hafızası & tematik menüler</div>
+            </div>
+          </div>
+
+          <a href="bilgi-al.html" class="btn btn-primary">
+            Birlikte Tasarlayalım <span class="arrow">→</span>
+          </a>
+        </div>
+
+        <div class="bespoke-visual reveal reveal-delay-1">
+          <img src="assets/img/muka-memory-wall.jpeg" alt="Muka buluşmalarından fotoğraflarla oluşturulan anı duvarı" width="1066" height="1599">
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. MUKA'DAN KARELER (CURATED GALLERY) -->
+    <section class="gallery-section section-spacing" id="galeri">
+      <div class="container">
+        <div class="section-header reveal" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div class="eyebrow">Görsel Hafıza</div>
+            <h2 style="font-size: var(--text-4xl);">Muka'dan Kareler</h2>
+          </div>
+        </div>
+
+        <div class="gallery-editorial-grid">
+          <div class="gallery-item reveal">
+            <img src="assets/img/muka-table-detail.jpeg" alt="Muka sofrasında özenle hazırlanan tabaklar" loading="lazy" width="899" height="1600">
+            <div class="gallery-caption">Sofra Detayları & Paylaşım</div>
+          </div>
+          <div class="gallery-item reveal reveal-delay-1">
+            <img src="assets/img/muka-table-perspective.jpeg" alt="Muka deneyimi için hazırlanan uzun davet sofrası" loading="lazy" width="899" height="1600">
+            <div class="gallery-caption">Uzun Sofra & Birlikte Deneyim</div>
+          </div>
+          <div class="gallery-item reveal reveal-delay-2">
+            <img src="assets/img/muka-art-table.jpeg" alt="Sanat yerleştirmesi önünde kurulan Muka sofrası" loading="lazy" width="899" height="1600">
+            <div class="gallery-caption">Sanat & Gastronomi Buluşması</div>
+          </div>
+          <div class="gallery-item reveal reveal-delay-3">
+            <img src="assets/img/muka-dining-detail.jpeg" alt="Muka gastronomi deneyiminden sıcak bir yemek detayı" loading="lazy" width="1066" height="1599">
+            <div class="gallery-caption">Gastronomi & Duyusal Anlar</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. BİRLİKTE ÜRETTİKLERİMİZ (SELECTED PARTNERS) -->
+    <section class="partners-section" id="partnerler">
+      <div class="container">
+        <div class="partners-title reveal">Birlikte Ürettiklerimiz & İlham Ortaklarımız</div>
+        <div class="partners-flex reveal reveal-delay-1">
+          <span class="partner-text-mark">P&G</span>
+          <span class="partner-text-mark">WATSONS</span>
+          <span class="partner-text-mark">HOUSE OF KAMER</span>
+          <span class="partner-text-mark">THERAPERA</span>
+          <span class="partner-text-mark">G COLLECTIVE</span>
+          <span class="partner-text-mark">NORN DESIGN STUDIO</span>
+          <span class="partner-text-mark">ELIT 1924</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. MUKA HAKKINDA -->
+    <section class="about-section section-spacing" id="hakkinda">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div style="border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 16px 36px rgba(28,25,23,0.06);">
+            <img src="assets/img/muka-about-atmosphere.jpeg" alt="Muka'nın sanat ve sofra atmosferinden bir görünüm" loading="lazy" width="899" height="1600">
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-delay-1">
+          <div class="eyebrow">Biz Kimiz?</div>
+          <h2 class="about-title">Muka Hakkında</h2>
+          <p class="about-body-text">
+            Muka, İstanbul'da farklı disiplinleri ve insanları aynı deneyimin etrafında buluşturan bağımsız bir deneyim tasarım oluşumudur. Gastronomiden yaratıcı atölyelere, sanat ve medya buluşmalarından özel davetlere uzanan her içerik; merak etmek, üretmek, paylaşmak ve birlikte hatırlamak için özenle tasarlanır. Hazır kalıpları tekrar etmek yerine her buluşmanın fikrine, katılımcılarına ve ruhuna göre özgün bir akış kurarız. Amacımız yalnızca iyi vakit geçirilen etkinlikler düzenlemek değil; insanlar arasında gerçek bağlar kuran, yeni bakış açıları açan ve bittikten sonra da hatırlanan anlar yaratmaktır.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 13. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-title">Muka</div>
+          <p class="footer-motto">
+            Deneyimin ve yaratıcılığın buluşma noktası.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-nav-title">Gezinti</div>
+          <div class="footer-links-list">
+            <a href="#hakkinda" class="footer-link">Muka Hakkında</a>
+            <a href="#deneyimler" class="footer-link">Deneyimler</a>
+            <a href="#sanat-gastronomi" class="footer-link">Sanat · Gastronomi</a>
+            <a href="#size-ozel" class="footer-link">Size Özel</a>
+            <a href="bilgi-al.html" class="footer-link">İletişim & Rezervasyon</a>
+            <a href="#yaklasanlar" class="footer-link">Yaklaşan Deneyimler</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-nav-title">İletişim & Sosyal</div>
+          <div class="footer-links-list">
+            <a href="mailto:info@mukajourney.com" class="footer-link">info@mukajourney.com</a>
+            <a href="https://www.instagram.com/mukajourney/" target="_blank" rel="noopener" class="footer-link">Instagram</a>
+            <a href="https://www.linkedin.com/company/mukaj/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Muka · İstanbul</div>
+        <div>© Muka Journey. Tüm hakları saklıdır.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- NOTIFICATION MODAL (HABERDAR OL) -->
+  <div class="modal-backdrop" id="notification-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-window">
+      <button class="modal-close" id="modal-close-btn" aria-label="Kapat">×</button>
+      <div class="eyebrow">Etkinlik Bülteni</div>
+      <h3 id="modal-title" style="font-size: var(--text-2xl); margin-bottom: 0.75rem;">Yeni Deneyimlerden Haberdar Olun</h3>
+      <p style="font-size: var(--text-sm); color: var(--color-muted); margin-bottom: 1.5rem;">
+        Muka'nın sıradaki atölyeleri, şef masaları ve özel buluşmaları duyurulduğunda ilk siz bilgi sahibi olun.
+      </p>
+
+      <form id="modal-form">
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label class="form-label" for="modal-email">E-posta Adresiniz</label>
+          <input class="form-input" type="email" id="modal-email" placeholder="ornek@alanadi.com" required>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width: 100%;">
+          Beni Haberdar Et <span class="arrow">→</span>
+        </button>
+        <div id="modal-feedback" class="form-feedback"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+</body>
+</html>

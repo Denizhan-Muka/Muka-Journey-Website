@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muka | Başvuru Yönetimi</title>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+  <header><div><span class="brand">muka</span><span class="badge">Yönetim</span></div><a href="index.html">Siteye dön ↗</a></header>
+  <main>
+    <section class="login-panel" id="login-panel">
+      <p class="eyebrow">Güvenli erişim</p><h1>Başvuru kayıtları</h1>
+      <p>Sunucuyu başlatırken belirlediğiniz <code>ADMIN_TOKEN</code> değerini girin. Anahtar yalnızca bu tarayıcı sekmesinde tutulur.</p>
+      <form id="admin-login"><label for="admin-token">Yönetim anahtarı</label><div class="token-row"><input id="admin-token" type="password" autocomplete="current-password" required><button type="submit">Kayıtları Göster</button></div></form>
+      <p class="feedback" id="admin-feedback" role="status"></p>
+    </section>
+    <section class="dashboard" id="dashboard" hidden>
+      <div class="dashboard-head"><div><p class="eyebrow">Muka veri merkezi</p><h1>Başvurular ve aboneler</h1></div><button id="refresh" class="secondary">Yenile</button></div>
+      <div class="stats"><article><span id="inquiry-count">0</span><small>Bilgi talebi</small></article><article><span id="subscriber-count">0</span><small>Bülten abonesi</small></article></div>
+      <section class="table-card"><h2>Bilgi talepleri</h2><div class="table-scroll"><table><thead><tr><th>Tarih</th><th>Ad Soyad</th><th>E-posta</th><th>Deneyim</th><th>Kişi</th><th>Tercih</th><th>Mesaj</th><th>Dil</th></tr></thead><tbody id="inquiries-body"></tbody></table></div><p class="empty" id="inquiries-empty">Henüz bilgi talebi yok.</p></section>
+      <section class="table-card"><h2>Haberdar Ol aboneleri</h2><div class="table-scroll"><table><thead><tr><th>Tarih</th><th>E-posta</th><th>Dil</th></tr></thead><tbody id="subscribers-body"></tbody></table></div><p class="empty" id="subscribers-empty">Henüz abone yok.</p></section>
+    </section>
+  </main>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

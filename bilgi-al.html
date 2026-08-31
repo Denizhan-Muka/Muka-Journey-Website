@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilgi Al | Muka Journey</title>
+  <meta name="description" content="Muka deneyimleri, özel buluşmalar ve kurumsal etkinlikler hakkında bilgi alın.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="inquiry-page">
+  <header class="site-header is-scrolled" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Muka Journey Ana Sayfa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 52" role="img" aria-labelledby="muka-logo-title">
+          <title id="muka-logo-title">Muka</title>
+          <text x="2" y="42" font-family="'Century Gothic', 'Avenir Next', Futura, sans-serif" font-size="48" font-weight="300" letter-spacing="-3.1" fill="#1C1917">mu<tspan fill="#8E2020">k</tspan>a</text>
+        </svg>
+      </a>
+      <a href="index.html" class="nav-link inquiry-home-link">Ana Sayfaya Dön</a>
+      <div class="language-switcher nav-language" role="group" aria-label="Dil seçimi">
+        <button class="language-option is-active" type="button" data-language="tr" aria-pressed="true">TR</button><span aria-hidden="true">/</span><button class="language-option" type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="inquiry-main">
+    <section class="contact-section section-spacing" id="rezervasyon">
+      <div class="container">
+        <a href="index.html" class="inquiry-back-link">← Ana Sayfaya Dön</a>
+        <div class="contact-layout">
+          <div class="contact-info-block reveal" id="iletisim">
+            <div>
+              <div class="eyebrow">İletişime Geçin</div>
+              <h1 class="contact-title">Deneyiminizi Birlikte Tasarlayalım</h1>
+              <p class="contact-desc">Katılmak istediğiniz bir Muka deneyimini, sevdiklerinizle planladığınız özel bir buluşmayı veya ekibinize özel bir etkinlik fikrini bizimle paylaşın. İhtiyacınızı dikkatle dinleyip size uygun seçeneklerle dönüş yapalım.</p>
+              <div class="contact-meta-items">
+                <div><div class="meta-item-label">Adres</div><div class="meta-item-val">Muka, İstanbul</div></div>
+                <div><div class="meta-item-label">E-posta</div><div class="meta-item-val"><a href="mailto:info@mukajourney.com">info@mukajourney.com</a></div></div>
+                <div><div class="meta-item-label">Sosyal Medya</div><div class="meta-item-val social-links"><a href="https://www.instagram.com/mukajourney/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.linkedin.com/company/mukaj/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card reveal reveal-delay-1">
+            <form id="reservation-form">
+              <div class="form-grid">
+                <div class="form-group"><label class="form-label" for="form-name">Ad Soyad *</label><input class="form-input" type="text" id="form-name" name="name" autocomplete="name" placeholder="Adınız ve Soyadınız" required></div>
+                <div class="form-group"><label class="form-label" for="form-email">E-posta *</label><input class="form-input" type="email" id="form-email" name="email" autocomplete="email" placeholder="ornek@alanadi.com" required></div>
+                <div class="form-group"><label class="form-label" for="form-experience">İlgilendiğiniz Deneyim</label><select class="form-select" id="form-experience" name="experience"><option value="">Lütfen bir deneyim alanı seçin</option><option value="Gastronomi ve Tadım">Gastronomi & Tadım</option><option value="Yaratıcı Atölye">Yaratıcı Atölye</option><option value="Sanat ve Medya">Sanat & Medya</option><option value="Özel Organizasyon">Özel Organizasyon</option><option value="Kurumsal Etkinlik">Kurumsal Etkinlik</option><option value="Yaklaşan Deneyimler">Yaklaşan Etkinlikler Hakkında Bilgi</option><option value="Diğer">Diğer</option></select></div>
+                <div class="form-grid-2col">
+                  <div class="form-group"><label class="form-label" for="form-guests">Tahmini Kişi Sayısı</label><input class="form-input" type="text" id="form-guests" name="guests" placeholder="Örn: 2 kişi veya 15 kişilik ekip"></div>
+                  <div class="form-group"><label class="form-label" for="form-date">Tercih Ettiğiniz Tarih</label><input class="form-input" type="text" id="form-date" name="preferredDate" placeholder="Örn: Hafta sonu / Eylül başı"></div>
+                </div>
+                <div class="form-group"><label class="form-label" for="form-message">Mesajınız ve Deneyim Detayları</label><textarea class="form-textarea" id="form-message" name="message" placeholder="Aklınızdaki konsepti, özel isteklerinizi veya sormak istediklerinizi belirtebilirsiniz..."></textarea></div>
+                <button class="btn btn-primary" type="submit" style="width:100%;">Bilgi Talebini Gönder <span class="arrow">→</span></button>
+                <p class="form-privacy-note">Bilgileriniz yalnızca talebinize dönüş yapmak amacıyla saklanır.</p>
+                <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer compact-footer"><div class="container footer-bottom"><div>Muka · İstanbul</div><div>© Muka Journey. Tüm hakları saklıdır.</div></div></footer>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+</body>
+</html>
