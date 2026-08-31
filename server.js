@@ -8,7 +8,7 @@ const { DatabaseSync } = require('node:sqlite');
 
 const ROOT = __dirname;
 const PORT = Number(process.env.PORT || 8080);
-const DATA_DIR = path.join(ROOT, 'data');
+const DATA_DIR = path.join('/tmp', 'muka-data');
 const DB_PATH = process.env.MUKA_DB_PATH || path.join(DATA_DIR, 'muka.sqlite');
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || '';
 fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
@@ -105,10 +105,17 @@ function serveStatic(req, res, pathname) {
   });
 }
 
-const server = http.createServer((req, res) => {
+function handler(req, res) {
   const pathname = new URL(req.url, `http://${req.headers.host || 'localhost'}`).pathname;
   if (pathname.startsWith('/api/')) return api(req, res, pathname);
   if (!['GET','HEAD'].includes(req.method)) return sendJson(res, 405, {ok:false, error:'method_not_allowed'});
   serveStatic(req, res, pathname);
-});
-server.listen(PORT, () => console.log(`Muka: http://localhost:${PORT} | Yönetim: http://localhost:${PORT}/admin`));
+}
+
+// Vercel imports the handler; local development runs the HTTP server directly.
+if (require.main === module) {
+  const server = http.createServer(handler);
+  server.listen(PORT, () => console.log(`Muka: http://localhost:${PORT} | Yönetim: http://localhost:${PORT}/admin`));
+}
+
+module.exports = handler;
