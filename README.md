@@ -22,7 +22,7 @@ Muka Journey web sitesi, klasik etkinlik platformu şablonlarının ötesinde, e
 ├── index.html                  # Semantik HTML5 ve SEO optimize ana sayfa
 ├── bilgi-al.html               # Bilgi ve deneyim talebi sayfası
 ├── admin.html                  # Korumalı kayıt görüntüleme ekranı
-├── server.js                   # Statik sunucu, API ve SQLite veri katmanı
+├── local-server.js             # Yerel statik sunucu, API ve SQLite veri katmanı
 ├── assets/
 │   ├── css/
 │   │   └── style.css           # Editoryal tasarım sistemi & stiller
@@ -42,7 +42,7 @@ Projeyi yerel bilgisayarınızda çalıştırmak için:
 ```bash
 # PowerShell: güçlü bir yönetim anahtarı belirleyin
 $env:ADMIN_TOKEN="buraya-guclu-bir-anahtar-yazin"
-npm start
+npm run dev
 ```
 
 Tarayıcınızda açın: `http://localhost:8080`
