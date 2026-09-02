@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initUpcomingEvents();
   initContactForm();
   initNotificationModal();
+  initCookieConsent();
   initSmoothScroll();
 });
 
@@ -290,10 +291,11 @@ function initContactForm() {
     const guests = form.querySelector('#form-guests').value.trim();
     const date = form.querySelector('#form-date').value.trim();
     const message = form.querySelector('#form-message').value.trim();
+    const privacyAccepted = form.querySelector('#form-privacy')?.checked;
 
-    if (!name || !email) {
+    if (!name || !email || !privacyAccepted) {
       feedback.className = 'form-feedback is-error';
-      feedback.textContent = window.mukaI18n?.t('Lütfen Ad Soyad ve E-posta alanlarını eksiksiz doldurun.') || 'Lütfen Ad Soyad ve E-posta alanlarını eksiksiz doldurun.';
+      feedback.textContent = !privacyAccepted ? 'Lütfen KVKK Aydınlatma Metni’ni okuduğunuzu onaylayın.' : (window.mukaI18n?.t('Lütfen Ad Soyad ve E-posta alanlarını eksiksiz doldurun.') || 'Lütfen Ad Soyad ve E-posta alanlarını eksiksiz doldurun.');
       return;
     }
 
@@ -348,6 +350,13 @@ function initNotificationModal() {
   modalForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const emailInput = modalForm.querySelector('input[type="email"]');
+    const marketingConsent = modalForm.querySelector('#modal-consent');
+    if (!marketingConsent?.checked) {
+      modalFeedback.style.display = 'block';
+      modalFeedback.className = 'form-feedback is-error';
+      modalFeedback.textContent = 'Lütfen duyuru iletileri için açık rıza kutusunu işaretleyin.';
+      return;
+    }
     if (emailInput && emailInput.value) {
       const isEnglish = window.mukaI18n?.getLanguage() === 'en';
       const submit = modalForm.querySelector('button[type="submit"]');
@@ -371,7 +380,59 @@ function initNotificationModal() {
 }
 
 /* --------------------------------------------------------------------------
-   8. SMOOTH SCROLL FOR ANCHOR LINKS
+   8. COOKIE PREFERENCES
+   Only the consent record is stored. Optional categories remain off by default.
+   -------------------------------------------------------------------------- */
+function initCookieConsent() {
+  const storageKey = 'muka-cookie-preferences-v1';
+  const banner = document.createElement('section');
+  banner.className = 'cookie-banner';
+  banner.setAttribute('aria-label', 'Çerez tercihleri');
+  banner.innerHTML = `
+    <div class="cookie-banner-inner">
+      <div class="cookie-copy"><strong>Çerez tercihlerinizi siz yönetin</strong><p>Sitenin çalışması için zorunlu yerel depolama kullanıyoruz. İsteğe bağlı analitik ve pazarlama teknolojileri ancak izninizle etkinleştirilir.</p><a href="cerez-politikasi.html">Çerez Politikası</a></div>
+      <div class="cookie-actions"><button type="button" class="cookie-btn" data-cookie="reject">Yalnızca Zorunlu</button><button type="button" class="cookie-btn" data-cookie="settings">Tercihler</button><button type="button" class="cookie-btn cookie-btn-primary" data-cookie="accept">Tümünü Kabul Et</button></div>
+    </div>
+    <div class="cookie-settings" hidden>
+      <label><span><strong>Zorunlu</strong><small>Tercihinizi hatırlar ve site işlevlerini sağlar.</small></span><input type="checkbox" checked disabled aria-label="Zorunlu çerezler her zaman açık"></label>
+      <label><span><strong>Analitik</strong><small>Site kullanımını anlamamıza yardımcı olur.</small></span><input id="cookie-analytics" type="checkbox"></label>
+      <label><span><strong>Pazarlama</strong><small>İlgi alanına uygun iletişim ve ölçüm için kullanılabilir.</small></span><input id="cookie-marketing" type="checkbox"></label>
+      <button type="button" class="cookie-btn cookie-btn-primary" data-cookie="save">Tercihleri Kaydet</button>
+    </div>`;
+  document.body.appendChild(banner);
+
+  const saved = localStorage.getItem(storageKey);
+  if (!saved) banner.classList.add('is-visible');
+
+  const save = preferences => {
+    localStorage.setItem(storageKey, JSON.stringify({ ...preferences, savedAt: new Date().toISOString() }));
+    banner.classList.remove('is-visible');
+    document.dispatchEvent(new CustomEvent('muka:cookie-consent', { detail: preferences }));
+  };
+
+  banner.addEventListener('click', event => {
+    const action = event.target.closest('[data-cookie]')?.dataset.cookie;
+    if (action === 'settings') {
+      const panel = banner.querySelector('.cookie-settings');
+      panel.hidden = !panel.hidden;
+    }
+    if (action === 'reject') save({ analytics: false, marketing: false });
+    if (action === 'accept') save({ analytics: true, marketing: true });
+    if (action === 'save') save({ analytics: banner.querySelector('#cookie-analytics').checked, marketing: banner.querySelector('#cookie-marketing').checked });
+  });
+
+  document.querySelectorAll('[data-open-cookie-settings]').forEach(button => button.addEventListener('click', event => {
+    event.preventDefault();
+    const current = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    banner.querySelector('#cookie-analytics').checked = Boolean(current.analytics);
+    banner.querySelector('#cookie-marketing').checked = Boolean(current.marketing);
+    banner.querySelector('.cookie-settings').hidden = false;
+    banner.classList.add('is-visible');
+  }));
+}
+
+/* --------------------------------------------------------------------------
+   9. SMOOTH SCROLL FOR ANCHOR LINKS
    -------------------------------------------------------------------------- */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
