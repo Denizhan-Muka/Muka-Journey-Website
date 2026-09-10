@@ -302,7 +302,6 @@ function initUpcomingEvents() {
             <p class="exp-card-desc">${evt.description}</p>
           </div>
           <div class="event-live-actions">
-            <a href="bilgi-al.html" class="btn btn-secondary">Rezervasyon Talebi <span class="arrow">→</span></a>
             <a href="${evt.instagramUrl}" target="_blank" rel="noopener" class="event-instagram-link">Instagram’da İncele ↗</a>
           </div>
         </div>
