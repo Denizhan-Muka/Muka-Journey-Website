@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initSectionOrder();
   initNavigation();
   initActiveNavigation();
+  initUpcomingEvents();
   initScrollReveals();
   initPillarsInteraction();
   initExperienceAccordions();
-  initUpcomingEvents();
   initContactForm();
   initNotificationModal();
   initCookieConsent();
@@ -216,16 +216,54 @@ function initExperienceAccordions() {
 // When empty, renders the authentic Empty State.
 // When events are added, dynamically renders the upcoming event cards!
 const upcomingEvents = [
-  /*
-  Example future event entry:
   {
-    title: "Şef Masası: Balkan & Akdeniz Lezzet Yolculuğu",
+    title: "İstanbul’da Bir Ege Sofrası — Yaza Veda",
     category: "Gastronomi & Tadım",
-    date: "14 Eylül 2026, 19:30",
-    location: "Beyoğlu, İstanbul",
-    description: "Özel seçilmiş menü eşliğinde samimi bir sofra ve lezzet anlatısı."
+    date: "18 Eylül 2026 Cuma · 18.30–21.30",
+    location: "Cihangir’de bir teras",
+    description: "Ege’nin uzun sofralarından ve paylaşma kültüründen ilham alan; mezeler, denizden tatlar ve uzun sohbetlerle yazı uğurladığımız özel bir akşam.",
+    instagramUrl: "https://www.instagram.com/p/Dc4FTrviKy_/"
+  },
+  {
+    title: "Tutulmalar ve Ekinoks — Astroloji Atölyesi",
+    category: "Yaratıcı Atölye",
+    date: "20 Eylül 2026 Pazar · 18.30–21.30",
+    location: "Galata, İstanbul",
+    description: "Tutulma döngüsünün genel dinamiklerini konuşup doğum haritalarımız üzerinden dönemin kişisel etkilerini birlikte incelediğimiz özel bir deneyim akşamı.",
+    instagramUrl: "https://www.instagram.com/p/Dc6QDJ1Iyu3/"
+  },
+  {
+    title: "Muka Sinema Kulübü",
+    category: "Sinema & Anlatı",
+    date: "22 Eylül 2026 Salı · 20.00",
+    location: "MSV House · Galata, Beyoğlu",
+    description: "“Bir Annenin Sonatı” ve “Free Fun” kısa film gösterimlerinin ardından yönetmen Fehmi Öztürk’ün katılımıyla gerçekleşecek söyleşi.",
+    instagramUrl: "https://www.instagram.com/p/Dc6u5AqCAqg/"
+  },
+  {
+    title: "Sushi Night: Make, Taste & Discover",
+    category: "Gastronomi & Tadım",
+    date: "24 Eylül 2026 Perşembe · 19.30",
+    location: "MSV House · Galata, İstanbul",
+    description: "Sushinin temelini ve hazırlanışını öğreniyor, kendi sushimizi birlikte hazırlıyor ve gecenin sonunda yaptıklarımızı beraber tadıyoruz.",
+    instagramUrl: "https://www.instagram.com/p/Dc8vfLAIOBw/"
+  },
+  {
+    title: "Meze, Muhabbet, Müzik",
+    category: "Gastronomi & Tadım",
+    date: "25 Eylül 2026 Cuma",
+    location: "MSV House · Galata, İstanbul",
+    description: "Şefimiz eşliğinde mezelerimizi birlikte hazırlayıp bize özel kurulan sofrada tadacağımız; ikramlar, müzik ve bolca sohbetle ilerleyen bir akşam.",
+    instagramUrl: "https://www.instagram.com/p/Dc_Wro2oDIm/"
+  },
+  {
+    title: "Kampusify Episode 1 — Sunset & Tekne",
+    category: "Müzik & Buluşma",
+    date: "26 Eylül 2026 Cumartesi · 17.00–21.00",
+    location: "Karaköy İskelesi · Tekne hareketi 17.30",
+    description: "Boğaz’da gün batımı, melodik DJ ve canlı keman eşliğinde yalnızca üniversite öğrencilerine özel bir gece.",
+    instagramUrl: "https://www.instagram.com/p/Dc_nm5NIZi0/"
   }
-  */
 ];
 
 function initUpcomingEvents() {
@@ -260,11 +298,13 @@ function initUpcomingEvents() {
           <div>
             <div class="event-live-date">${evt.date} · ${evt.category}</div>
             <h3 class="exp-card-title" style="margin-top: 0.5rem;">${evt.title}</h3>
+            <div class="event-live-location">${evt.location}</div>
             <p class="exp-card-desc">${evt.description}</p>
           </div>
-          <a href="bilgi-al.html" class="btn btn-secondary" style="align-self: flex-start;">
-            Rezervasyon Talebi <span class="arrow">→</span>
-          </a>
+          <div class="event-live-actions">
+            <a href="bilgi-al.html" class="btn btn-secondary">Rezervasyon Talebi <span class="arrow">→</span></a>
+            <a href="${evt.instagramUrl}" target="_blank" rel="noopener" class="event-instagram-link">Instagram’da İncele ↗</a>
+          </div>
         </div>
       `;
     });
